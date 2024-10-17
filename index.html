@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Back Offline</title> <!-- Page Title -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #555;
+            text-align: center; /* Center the title */
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center text in the container */
+        }
+        .random-text {
+            font-size: 1.5em;
+            color: #333;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">Circle Back Offline</div> <!-- Centered Title -->
+
+    <div class="container">
+        <div class="random-text" id="randomText">
+            <!-- Random text will be inserted here -->
+        </div>
+    </div>
+        <p><button class="refresh-btn" onclick="refreshPage()">Meditate</button></p>
+    
+
+    <footer>
+        Circle Back Offline: A Corporate Haiku Blog | Copyright 2024
+    </footer> <!-- Footer Added -->
+
+<script>
+    // Predefined blocks of text
+    const texts = [
+        "Company all-hands<br>Align on top strategy:<br>Hearing myself talk",
+        "'Nothing from my end,'<br>I say to my muted mic.<br>No one notices.",
+        "'I think you're on mute!'<br>'--hear me now? I was on mute.'<br>'OK, there you are.'",
+        "Top priority<br>Everything is a fire drill<br>Therefore, nothing is"
+    ];
+
+    // Function to generate a random index and insert the corresponding text
+    function insertRandomText() {
+        const randomIndex = Math.floor(Math.random() * texts.length);
+        document.getElementById('randomText').innerHTML = texts[randomIndex];
+    }
+
+    // Insert random text when the page loads
+    window.onload = insertRandomText;
+
+    function refreshPage() {
+        window.location.reload(); // Refreshes the page
+    }
+</script>
+
+</body>
+</html>
