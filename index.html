@@ -5,37 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Circle Back Offline</title> <!-- Page Title -->
     <style>
+        /* Base styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            background-color: #f4f4f4;
         }
         .title {
             font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #555;
-            text-align: center; /* Center the title */
+            margin-top: 50px;
+            margin-bottom: 30px;
+            color: #333;
+            text-align: center;
         }
         .container {
             background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Center text in the container */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            text-align: center;
         }
         .random-text {
-            font-size: 1.5em;
+            font-size: 1.3em;
             color: #333;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .refresh-btn {
+            background-color: #e60023; /* Pinterest red */
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .refresh-btn:hover {
+            background-color: #c0001b;
         }
         footer {
             margin-top: 30px;
             font-size: 0.9em;
             color: #777;
+        }
+        /* Responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                max-width: 90%;
+            }
+            .title {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+            .random-text {
+                font-size: 1.1em;
+            }
+            .refresh-btn {
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
